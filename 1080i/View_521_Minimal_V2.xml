@@ -128,7 +128,7 @@
                 </control>
                 <control type="textbox">
                     <font>Tiny</font>
-                    <height min="36" max="176">auto</height>
+                    <height min="176" max="176">auto</height>
                     <textcolor>Dark2</textcolor>
                     <selectedcolor>Dark2</selectedcolor>
                     <label>$INFO[ListItem.Plot]</label>
@@ -138,7 +138,7 @@
                     <font>Tiny</font>
                     <textcolor>Dark2</textcolor>
                     <selectedcolor>Dark2</selectedcolor>
-                    <label>$VAR[LabelSub_2_YearDurationRating]</label>
+                    <label>$VAR[LabelSub_2_Drash]</label>
                 </control>
             </control>
             <control type="grouplist">
@@ -170,7 +170,7 @@
                     <font>Tiny</font>
                     <textcolor>Dark2</textcolor>
                     <selectedcolor>Dark2</selectedcolor>
-                    <label>$VAR[LabelSub_2_YearDurationRating]</label>
+                    <label>$VAR[LabelSub_2_Drash]</label>
                 </control>
             </control>
         </control>
