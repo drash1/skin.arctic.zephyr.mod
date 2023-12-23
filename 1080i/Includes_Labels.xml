@@ -501,7 +501,7 @@
 
     <variable name="LabelDurationTimeCheck">
         <value condition="!String.IsEmpty(ListItem.Duration(mins)) + !Skin.HasSetting(NewTime)">$INFO[ListItem.Duration(mins),, $LOCALIZE[31102]]</value>
-        <value condition="!String.IsEmpty(ListItem.Duration(mins)) + Skin.HasSetting(NewTime) + Integer.IsGreater(ListItem.Duration(h),0)">$INFO[ListItem.Duration(h),,$LOCALIZE[31088]]$INFO[ListItem.Duration(mm),,$LOCALIZE[31089]]</value>
+        <value condition="!String.IsEmpty(ListItem.Duration(mins)) + Skin.HasSetting(NewTime) + Integer.IsGreater(ListItem.Duration(h),0)">$INFO[ListItem.Duration(h),,h]$INFO[ListItem.Duration(mm),,$LOCALIZE[31089]]</value>
         <value condition="!String.IsEmpty(ListItem.Duration(mins)) + Skin.HasSetting(NewTime) + !Integer.IsGreater(ListItem.Duration(h),0)">$INFO[ListItem.Duration(m),,$LOCALIZE[31089]]</value>
     </variable>
     
