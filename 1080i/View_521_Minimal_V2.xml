@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
 <includes>
-
     <include name="521Content">
         <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(sets) | Container.Content(videos) | $EXP[InGameMode]</visible>
         <include content="forced_view" condition="Skin.HasSetting(enable.forcedviews)">
@@ -138,7 +137,7 @@
                     <font>Tiny</font>
                     <textcolor>Dark2</textcolor>
                     <selectedcolor>Dark2</selectedcolor>
-                    <label>$VAR[LabelSub_2_Drash]</label>
+                    <label>$VAR[LabelSub_2_Custom]</label>
                 </control>
             </control>
             <control type="grouplist">
@@ -170,7 +169,7 @@
                     <font>Tiny</font>
                     <textcolor>Dark2</textcolor>
                     <selectedcolor>Dark2</selectedcolor>
-                    <label>$VAR[LabelSub_2_Drash]</label>
+                    <label>$VAR[LabelSub_2_Custom]</label>
                 </control>
             </control>
         </control>

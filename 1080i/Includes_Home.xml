@@ -4309,28 +4309,23 @@
                 <orientation>horizontal</orientation>
                 <control type="label">
                     <include>MultiWidgetsSubLabelDefinition</include>
-                    <label>$INFO[Container($PARAM[id]).ListItem.Year]</label>
+                    <label>$INFO[Container($PARAM[id]).ListItem.Year,,  •  ]</label>
                     <visible>!String.IsEmpty(Container($PARAM[id]).ListItem.Year)</visible>
-                </control>
-                <control type="label">
-                    <include>MultiWidgetsSubLabelDefinition</include>
-                    <label>$INFO[Container($PARAM[id]).ListItem.MPAA,  •  Grade: ,  •  ]</label>
-                    <visible>!String.IsEmpty(Container($PARAM[id]).ListItem.MPAA)</visible>
                 </control>
                 <control type="label" description="Duration">
                     <include>MultiWidgetsSubLabelDefinition</include>
                     <visible>!String.IsEmpty(Container($PARAM[id]).ListItem.Duration(mins)) + !Skin.HasSetting(NewTime)</visible>
-                    <label>$INFO[Container($PARAM[id]).ListItem.Duration(mins),,$LOCALIZE[31102]]$INFO[ListItem.Endtime,  •  Heure de fin: ,]</label>
+                    <label>$INFO[Container($PARAM[id]).ListItem.Duration(mins),,$LOCALIZE[31102]]$INFO[ListItem.Endtime,  •  $LOCALIZE[31106] ,]</label>
                 </control>
                 <control type="label" description="Duration">
                     <include>MultiWidgetsSubLabelDefinition</include>
                     <visible>!String.IsEmpty(Container($PARAM[id]).ListItem.Duration(mins)) + Skin.HasSetting(NewTime) + Integer.IsGreater(Container($PARAM[id]).ListItem.Duration(h),0)</visible>
-                    <label>$INFO[Container($PARAM[id]).ListItem.Duration(h),,h]$INFO[Container($PARAM[id]).ListItem.Duration(mm),,$LOCALIZE[31089]]$INFO[ListItem.Endtime,  •  Heure de fin: ,]</label>
+                    <label>$INFO[Container($PARAM[id]).ListItem.Duration(h),,$LOCALIZE[31088]]$INFO[Container($PARAM[id]).ListItem.Duration(mm),,$LOCALIZE[31089]]$INFO[ListItem.Endtime,  •  $LOCALIZE[31106] ,]</label>
                 </control>
                 <control type="label" description="Duration">
                     <include>MultiWidgetsSubLabelDefinition</include>
                     <visible>!String.IsEmpty(Container($PARAM[id]).ListItem.Duration(mins)) + Skin.HasSetting(NewTime) + !Integer.IsGreater(Container($PARAM[id]).ListItem.Duration(h),0)</visible>
-                    <label>$INFO[Container($PARAM[id]).ListItem.Duration(m),,$LOCALIZE[31089]]$INFO[ListItem.Endtime,  •  Heure de fin: ,]</label>
+                    <label>$INFO[Container($PARAM[id]).ListItem.Duration(m),,$LOCALIZE[31089]]$INFO[ListItem.Endtime,  •  $LOCALIZE[31106] ,]</label>
                 </control>
                 <!-- <control type="label">
                     <include>MultiWidgetsSubLabelDefinition</include>

@@ -13,6 +13,7 @@
     <include file="Includes_NowPlaying.xml"/>
     <include file="Includes_Custom_Items.xml"/>
     <include file="Includes_Games.xml"/>
+	<include file="Variables.xml" />
 
     <!-- Views -->
     <include file="View_50_List.xml"/>
@@ -60,6 +61,14 @@
 
     <!-- Skin Shortcuts -->
     <include file="script-skinshortcuts-includes.xml"/>
+
+	<!-- Content Lists -->
+	<include name="EmbuaryHelperContentList">
+		<control type="list" id="9142">
+			<include>HiddenListControl</include>
+			<content limit="1">$VAR[EmbuaryHelperContentVar]</content>
+		</control>
+	</include>
 
     <!-- Expressions -->
     <expression name="HomeIsModernMultiWidgets">!Skin.HasSetting(home.vertical) + !Skin.HasSetting(home.classicwidgets) + Skin.HasSetting(home.modernwidgets) + Skin.HasSetting(home.vertical.widgets)</expression>

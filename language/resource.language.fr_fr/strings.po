@@ -359,7 +359,7 @@ msgstr "Episodes regardés"
 
 msgctxt "#31088"
 msgid "h"
-msgstr "H"
+msgstr "h"
 
 msgctxt "#31089"
 msgid "m"

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<variable name="RottenFreshLogoVar">
+		<value condition="Integer.IsGreaterOrEqual(Container(9142).ListItem.Rating(tomatometerallcritics),8.0)">misc/hot.png</value>
+		<value condition="Integer.IsGreaterOrEqual(Container(9142).ListItem.Rating(tomatometerallcritics),6.0)">misc/tomato.png</value>
+		<value>misc/rt.png</value>
+	</variable>
+	<variable name="RottenFreshLabelVar">
+		<value condition="String.StartsWith(Container(9142).ListItem.Rating(tomatometerallcritics),10.)">10</value>
+		<value condition="String.StartsWith(Container(9142).ListItem.Rating(tomatometerallcritics),9.)">9</value>
+		<value condition="String.StartsWith(Container(9142).ListItem.Rating(tomatometerallcritics),8.)">8</value>
+		<value condition="String.StartsWith(Container(9142).ListItem.Rating(tomatometerallcritics),7.)">7</value>
+		<value condition="String.StartsWith(Container(9142).ListItem.Rating(tomatometerallcritics),6.)">6</value>
+		<value condition="String.StartsWith(Container(9142).ListItem.Rating(tomatometerallcritics),5.)">5</value>
+		<value condition="String.StartsWith(Container(9142).ListItem.Rating(tomatometerallcritics),4.)">4</value>
+		<value condition="String.StartsWith(Container(9142).ListItem.Rating(tomatometerallcritics),3.)">3</value>
+		<value condition="String.StartsWith(Container(9142).ListItem.Rating(tomatometerallcritics),2.)">2</value>
+		<value condition="String.StartsWith(Container(9142).ListItem.Rating(tomatometerallcritics),1.)">1</value>
+	</variable>
+	<variable name="RottenFreshLabel2Var">
+		<value condition="String.EndsWith(Container(9142).ListItem.Rating(tomatometerallcritics),.0)">0%</value>
+		<value condition="String.EndsWith(Container(9142).ListItem.Rating(tomatometerallcritics),.9)">9%</value>
+		<value condition="String.EndsWith(Container(9142).ListItem.Rating(tomatometerallcritics),.8)">8%</value>
+		<value condition="String.EndsWith(Container(9142).ListItem.Rating(tomatometerallcritics),.7)">7%</value>
+		<value condition="String.EndsWith(Container(9142).ListItem.Rating(tomatometerallcritics),.6)">6%</value>
+		<value condition="String.EndsWith(Container(9142).ListItem.Rating(tomatometerallcritics),.5)">5%</value>
+		<value condition="String.EndsWith(Container(9142).ListItem.Rating(tomatometerallcritics),.4)">4%</value>
+		<value condition="String.EndsWith(Container(9142).ListItem.Rating(tomatometerallcritics),.3)">3%</value>
+		<value condition="String.EndsWith(Container(9142).ListItem.Rating(tomatometerallcritics),.2)">2%</value>
+		<value condition="String.EndsWith(Container(9142).ListItem.Rating(tomatometerallcritics),.1)">1%</value>
+	</variable>
+	<variable name="RottenFreshAudienceLogoVar">
+		<value condition="Integer.IsGreaterOrEqual(Container(9142).ListItem.Rating(tomatometerallaudience),6.0)">misc/good.png</value>
+		<value>misc/notgood.png</value>
+	</variable>
+	<variable name="RottenFreshAudienceLabelVar">
+		<value condition="String.StartsWith(Container(9142).ListItem.Rating(tomatometerallaudience),1.)">1</value>
+		<value condition="String.StartsWith(Container(9142).ListItem.Rating(tomatometerallaudience),2.)">2</value>
+		<value condition="String.StartsWith(Container(9142).ListItem.Rating(tomatometerallaudience),3.)">3</value>
+		<value condition="String.StartsWith(Container(9142).ListItem.Rating(tomatometerallaudience),4.)">4</value>
+		<value condition="String.StartsWith(Container(9142).ListItem.Rating(tomatometerallaudience),5.)">5</value>
+		<value condition="String.StartsWith(Container(9142).ListItem.Rating(tomatometerallaudience),6.)">6</value>
+		<value condition="String.StartsWith(Container(9142).ListItem.Rating(tomatometerallaudience),7.)">7</value>
+		<value condition="String.StartsWith(Container(9142).ListItem.Rating(tomatometerallaudience),8.)">8</value>
+		<value condition="String.StartsWith(Container(9142).ListItem.Rating(tomatometerallaudience),9.)">9</value>
+		<value condition="String.StartsWith(Container(9142).ListItem.Rating(tomatometerallaudience),10.)">10</value>
+	</variable>
+	<variable name="RottenFreshAudienceLabel2Var">
+		<value condition="String.EndsWith(Container(9142).ListItem.Rating(tomatometerallaudience),.0)">0%</value>
+		<value condition="String.EndsWith(Container(9142).ListItem.Rating(tomatometerallaudience),.9)">9%</value>
+		<value condition="String.EndsWith(Container(9142).ListItem.Rating(tomatometerallaudience),.8)">8%</value>
+		<value condition="String.EndsWith(Container(9142).ListItem.Rating(tomatometerallaudience),.7)">7%</value>
+		<value condition="String.EndsWith(Container(9142).ListItem.Rating(tomatometerallaudience),.6)">6%</value>
+		<value condition="String.EndsWith(Container(9142).ListItem.Rating(tomatometerallaudience),.5)">5%</value>
+		<value condition="String.EndsWith(Container(9142).ListItem.Rating(tomatometerallaudience),.4)">4%</value>
+		<value condition="String.EndsWith(Container(9142).ListItem.Rating(tomatometerallaudience),.3)">3%</value>
+		<value condition="String.EndsWith(Container(9142).ListItem.Rating(tomatometerallaudience),.2)">2%</value>
+		<value condition="String.EndsWith(Container(9142).ListItem.Rating(tomatometerallaudience),.1)">1%</value>
+	</variable>
+	<variable name="MetacriticLabelVar">
+		<value condition="String.StartsWith(Container(9142).ListItem.Rating(metacritic),10.)">10</value>
+		<value condition="String.StartsWith(Container(9142).ListItem.Rating(metacritic),9.)">9</value>
+		<value condition="String.StartsWith(Container(9142).ListItem.Rating(metacritic),8.)">8</value>
+		<value condition="String.StartsWith(Container(9142).ListItem.Rating(metacritic),7.)">7</value>
+		<value condition="String.StartsWith(Container(9142).ListItem.Rating(metacritic),6.)">6</value>
+		<value condition="String.StartsWith(Container(9142).ListItem.Rating(metacritic),5.)">5</value>
+		<value condition="String.StartsWith(Container(9142).ListItem.Rating(metacritic),4.)">4</value>
+		<value condition="String.StartsWith(Container(9142).ListItem.Rating(metacritic),3.)">3</value>
+		<value condition="String.StartsWith(Container(9142).ListItem.Rating(metacritic),2.)">2</value>
+		<value condition="String.StartsWith(Container(9142).ListItem.Rating(metacritic),1.)">1</value>
+	</variable>
+	<variable name="MetacriticLabel2Var">
+		<value condition="String.EndsWith(Container(9142).ListItem.Rating(metacritic),.0)">0%</value>
+		<value condition="String.EndsWith(Container(9142).ListItem.Rating(metacritic),.9)">9%</value>
+		<value condition="String.EndsWith(Container(9142).ListItem.Rating(metacritic),.8)">8%</value>
+		<value condition="String.EndsWith(Container(9142).ListItem.Rating(metacritic),.7)">7%</value>
+		<value condition="String.EndsWith(Container(9142).ListItem.Rating(metacritic),.6)">6%</value>
+		<value condition="String.EndsWith(Container(9142).ListItem.Rating(metacritic),.5)">5%</value>
+		<value condition="String.EndsWith(Container(9142).ListItem.Rating(metacritic),.4)">4%</value>
+		<value condition="String.EndsWith(Container(9142).ListItem.Rating(metacritic),.3)">3%</value>
+		<value condition="String.EndsWith(Container(9142).ListItem.Rating(metacritic),.2)">2%</value>
+		<value condition="String.EndsWith(Container(9142).ListItem.Rating(metacritic),.1)">1%</value>
+	</variable>
+	<variable name="EmbuaryHelperContentVar">
+		<value condition="ListItem.IsCollection" />
+		<value condition="VideoPlayer.Content(movies)">plugin://script.embuary.helper/?info=getbydbid&amp;dbid=$INFO[VideoPlayer.DBID]&amp;type=movie</value>
+		<value condition="Container.Content(movies)">plugin://script.embuary.helper/?info=getbydbid&amp;dbid=$INFO[ListItem.DBID]&amp;type=movie</value>
+		<value condition="Container.Content(tvshows)">plugin://script.embuary.helper/?info=getbydbid&amp;dbid=$INFO[ListItem.DBID]&amp;type=tvshow</value>
+	</variable>
+	<variable name="MovieSetsPathVar">
+		<value condition="String.IsEqual(ListItem.DBTYPE,set)">videodb://movies/sets/$INFO[ListItem.DBID]/?setid=$INFO[ListItem.DBID]</value>
+	</variable>
+</includes>

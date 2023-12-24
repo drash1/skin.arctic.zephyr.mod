@@ -38,6 +38,7 @@
     <onunload>ClearProperty(Item_Year,home)</onunload>
     <onunload>ClearProperty(Item_DBTYPE,home)</onunload>
     <controls>
+        <include condition="System.AddonIsEnabled(script.embuary.helper)">EmbuaryHelperContentList</include>
         <include>DialogVideoInfoWIP</include>
         <include content="DialogInfoOverlay">
             <param name="headerinfo" value="$INFO[ListItem.Title]" />

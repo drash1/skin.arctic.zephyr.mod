@@ -9,6 +9,7 @@
     <onunload condition="Skin.HasSetting(home.netflix.autoplay.trailer) + $EXP[TrailerIsPlaying] + !Skin.HasSetting(trailer.dont.stop.on.unfocus) + !Window.Next(FullScreenVideo)">Stop</onunload>
     <onunload condition="Skin.HasSetting(home.netflix.autoplay.trailer)">ClearProperty(listitem.trailer,home)</onunload>
     <controls>
+        <include condition="System.AddonIsEnabled(script.embuary.helper)">EmbuaryHelperContentList</include>
         <include>GlobalBackground</include>
         <include>View_550_List</include>
         <include condition="!Skin.HasSetting(50list.low)">View_50_List</include>
@@ -62,6 +63,10 @@
             <param name="plotinfo" value="$INFO[ListItem.Tagline,[B],[/B][CR][CR]]$INFO[ListItem.Plot]" />
             <param name="ondirection" value="50" />
         </include>
+        <control type="list" id="4500">
+			<include>HiddenListControl</include>
+			<content sortby="year" sortorder="ascending">$VAR[MovieSetsPathVar]</content>
+		</control>
         <include>AlbumAndSetsCount</include>
         <control type="group">
             <include>Animation.FadeIn</include>
