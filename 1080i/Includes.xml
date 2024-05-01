@@ -139,7 +139,7 @@
     </expression>
     
     <expression name="IsTVShowInProgress">
-        [Container.Content(tvshows) | String.IsEqual(ListItem.DBTYPE,tvshow) | Container.Content(season) | String.IsEqual(ListItem.DBTYPE,season)] + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + Integer.IsGreater(ListItem.Property(WatchedEpisodes),0) + !$EXP[IsNewTVShow]
+        [Container.Content(tvshows) | String.IsEqual(ListItem.DBTYPE,tvshow) | Container.Content(season) | String.IsEqual(ListItem.DBTYPE,season)] + !String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !$EXP[IsNewTVShow] + [!String.IsEqual(ListItem.Property(WatchedEpisodes),ListItem.Property(TotalEpisodes)) | Integer.IsGreater(ListItem.Property(WatchedEpisodes),0)]
     </expression>
     
     <expression name="IsTVShowInProgress301">
@@ -1921,16 +1921,6 @@
                 <selected>String.IsEmpty(ListItem.UserRating)</selected>
                 <visible>[String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,episode)] + Control.IsEnabled(7)</visible>
                 <visible>!Skin.HasSetting(hidebutton.video.rating)</visible>
-            </control>
-            <control type="radiobutton" id="14">
-                <onfocus>ClearProperty(moviecontent)</onfocus>
-                <onfocus>ClearProperty(ShowDisc)</onfocus>
-                <include>buttondimensions</include>
-                <include content="buttontextures">
-                    <param name="icon" value="buttonsdialogs/seasons.png"/>
-                </include>
-                <visible>String.IsEqual(ListItem.DBTYPE,movie)</visible>
-                <visible>!Skin.HasSetting(hidebutton.video.versions)</visible>
             </control>
             <control type="radiobutton" id="1236">
                 <onfocus>ClearProperty(moviecontent)</onfocus>
@@ -5176,18 +5166,5 @@
         <value condition="String.Contains(System.Language,French)">fr</value>
         <value condition="String.Contains(System.Language,Spanish)">es</value>
         <value>en</value>
-    </variable>
-    
-    <variable name="VideoVersionPosterVar">
-        <value condition="ControlGroup(200).HasFocus(201) + !String.IsEmpty(Container(50).ListItem.Art(poster))">$INFO[Container(50).ListItem.Art(poster)]</value>
-        <value condition="ControlGroup(200).HasFocus(201) + String.IsEmpty(Container(51).ListItem.Art(poster))">$INFO[Container(50).ListItem.Art(thumb)]</value>
-        <value condition="ControlGroup(200).HasFocus(202) + !String.IsEmpty(Container(51).ListItem.Art(poster))">$INFO[Container(51).ListItem.Art(poster)]</value>
-        <value condition="ControlGroup(200).HasFocus(202) + String.IsEmpty(Container(51).ListItem.Art(poster))">$INFO[Container(51).ListItem.Art(thumb)]</value>
-    </variable>
-    
-    <variable name="VideoVersionFileVar">
-        <value condition="Control.HasFocus(50)">$INFO[Container(50).ListItem.FileNameAndPath]</value>
-        <value condition="Control.HasFocus(51)">$INFO[Container(51).ListItem.FileNameAndPath]</value>
-        <value>$INFO[ListItem.FileNameAndPath]</value>
     </variable>
 </includes>
