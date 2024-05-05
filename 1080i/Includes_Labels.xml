@@ -433,6 +433,7 @@
 
     <variable name="LabelSub_1_GenreAlbum">
         <value condition="ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinInfo.Set.Movies.Genre))">$INFO[Window(home).Property(SkinInfo.Set.Movies.Genre)]</value>
+        <value condition="ListItem.IsCollection">$INFO[Container(4500).ListItem(0).Genre]</value>
         <value condition="Container.Content(albums) + !String.IsEmpty(ListItem.Album)">$INFO[ListItem.Album]</value>
         <value condition="[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + !String.IsEmpty(ListItem.Genre)">$INFO[ListItem.Genre]</value>
         <value condition="$EXP[InGameMode]">$VAR[GameGenre]</value>
@@ -452,9 +453,7 @@
         <value condition="$EXP[InGameMode]">$VAR[GameYear]$VAR[GameRating,  •  ,]</value>
         <value>$LOCALIZE[19055]</value>
     </variable>
-    <variable name="test">
-        <value>plugin://plugin.video.themoviedb.helper/?info=details&amp;type=movie&amp;query=$INFO[ListItem.Title]</value>
-    </variable>
+
     <variable name="LabelSub_2_Custom">
         <value condition="ListItem.IsCollection">$INFO[Container(4500).ListItem(0).Year]$INFO[Container(4500).ListItem(-1).Year, - ]$INFO[Container(4500).NumItems,  •  , $LOCALIZE[342]]</value>
         <value condition="Container.Content(tvshows) | Container.Content(seasons)">$INFO[ListItem.Year,,  •  ]$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]] $INFO[ListItem.Property(UnWatchedEpisodes),  •  , $LOCALIZE[16101]]</value>
